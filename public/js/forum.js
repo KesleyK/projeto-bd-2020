@@ -4,7 +4,9 @@ const buttonEntrar = document.getElementById("buttonLoginForum");
 function loadPage() {
   const idUser = localStorage.getItem("userId");
 
-  fetch("http://localhost:3001/message/findall", {
+  const idInstituicao = localStorage.getItem("id_instituicao");
+
+  fetch("http://localhost:3001/message/findall/institution/"+idInstituicao, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
