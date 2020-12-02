@@ -14,4 +14,8 @@ router.delete("/delete/:id", userController.deleteOne);
 
 router.post("/login", userController.login);
 
+router.get("/view", userController.view);
+
+router.get("/procedure/:id", userController.procedure);
+
 module.exports = router;

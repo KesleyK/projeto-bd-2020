@@ -19,7 +19,7 @@ password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
 function logar() {
-  window.location.href = "../frontend-2020/entrar.html";
+  window.location.href = "../public/entrar.html";
 }
 
 function getInstituicao() {

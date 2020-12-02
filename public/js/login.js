@@ -62,7 +62,7 @@ async function verifLog() {
       localStorage.removeItem("userId");
       localStorage.removeItem("email");
       localStorage.removeItem("typerUserById");
-      localStorage.removeItem("id_instituicao")
+      localStorage.removeItem("id_instituicao");
       alert("Deslogado");
       location.reload();
     };
@@ -74,7 +74,7 @@ async function verifLog() {
 }
 
 function crialPerfil() {
-  window.location.href = "../frontend-2020/perfil.html";
+  window.location.href = "../public/perfil.html";
 }
 
 form.onsubmit = (e) => {

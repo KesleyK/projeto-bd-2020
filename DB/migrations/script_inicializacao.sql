@@ -32,7 +32,7 @@ CREATE TABLE sobre (
 	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     `status` INT NOT NULL,
     instituicao_id INTEGER UNSIGNED,
-    FOREIGN KEY(instituicao_id) references instituicao(id)
+    FOREIGN KEY(instituicao_id) references instituicao(id) ON DELETE CASCADE
 
 );
 
@@ -41,7 +41,7 @@ CREATE TABLE transmissao (
     titulo VARCHAR(60) NOT NULL,
     descricao VARCHAR(400) NOT NULL,
     sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id)
+    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
 );
 
 CREATE TABLE sintomas (
@@ -49,7 +49,7 @@ CREATE TABLE sintomas (
     titulo VARCHAR(60) NOT NULL,
     descricao VARCHAR(400) NOT NULL,
     sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id)
+    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
 );
 
 CREATE TABLE cuidados (
@@ -57,7 +57,7 @@ CREATE TABLE cuidados (
     titulo VARCHAR(60) NOT NULL,
     descricao VARCHAR(400) NOT NULL,
     sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id)
+    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
 );
 
 CREATE TABLE noticias (
@@ -66,7 +66,7 @@ CREATE TABLE noticias (
     descricao VARCHAR(400) NOT NULL,
     url_imagem VARCHAR(60) NOT NULL,
     instituicao_id INTEGER UNSIGNED,
-    FOREIGN KEY(instituicao_id) references instituicao(id)
+    FOREIGN KEY(instituicao_id) references instituicao(id) ON DELETE CASCADE
 );
 
 CREATE TABLE tipo_usuario (

@@ -126,3 +126,19 @@ exports.login = (req, res) => {
     return res.status(200).json({ userId: fetchedUser.id });
   });
 };
+
+exports.view = (req, res) => {
+  User.view((result) => {
+    return res.status(200).json(result);
+  });
+};
+
+exports.procedure = (req, res) => {
+  const data = {
+    id: req.params.id,
+  };
+
+  User.procedure(data, (result) => {
+    return res.status(200).json(result);
+  });
+};

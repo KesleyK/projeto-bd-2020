@@ -76,6 +76,22 @@ class User {
       cb(JSON.parse(JSON.stringify(rows)));
     });
   }
+
+  static view(cb) {
+    conn.query("SELECT * FROM usuarios_instituicao", (err, rows) => {
+      if (err) return cb(null, err.sqlMessage);
+
+      cb(JSON.parse(JSON.stringify(rows)), err);
+    });
+  }
+
+  static procedure(data, cb) {
+    conn.query("CALL verInstituicao(?)", data.id, (err, rows) => {
+      if (err) return cb(null, err.sqlMessage);
+
+      cb(JSON.parse(JSON.stringify(rows)), err);
+    });
+  }
 }
 
 module.exports = User;
