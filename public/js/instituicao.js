@@ -6,6 +6,8 @@ var buttonOcultar = document.getElementById("buttonOcultar");
 
 function deleteInstituicaoById(id) {
   //Deleta a instituicao
+  const loggedUserInstitution = localStorage.getItem("id_instituicao");
+
   fetch("http://localhost:3001/institution/delete/" + id, {
     method: "DELETE",
     headers: {
@@ -15,6 +17,9 @@ function deleteInstituicaoById(id) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      if (id === loggedUserInstitution) {
+        logout();
+      }
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -144,3 +149,12 @@ formList.onsubmit = (e) => {
 
   document.getElementById("buttonListar").style.display = "none";
 };
+
+function logout() {
+  localStorage.removeItem("userId");
+  localStorage.removeItem("email");
+  localStorage.removeItem("typerUserById");
+  localStorage.removeItem("id_instituicao");
+  alert("Deslogado");
+  location.reload();
+}

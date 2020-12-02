@@ -114,6 +114,8 @@ formRemove.onsubmit = (e) => {
 
   const id = document.getElementById("idUserRemove").value;
 
+  const loggedUserId = localStorage.getItem("userId");
+
   fetch("http://localhost:3001/users/delete/" + id, {
     method: "DELETE",
     headers: {
@@ -123,8 +125,20 @@ formRemove.onsubmit = (e) => {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      if (id === loggedUserId) {
+        logout();
+      }
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 };
+
+function logout() {
+  localStorage.removeItem("userId");
+  localStorage.removeItem("email");
+  localStorage.removeItem("typerUserById");
+  localStorage.removeItem("id_instituicao");
+  alert("Deslogado");
+  location.reload();
+}
