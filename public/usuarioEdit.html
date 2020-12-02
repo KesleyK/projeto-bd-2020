@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/conf.css" rel="stylesheet">
+    <link href="css/styleMenu.css" rel="stylesheet">
+    <link href="css/styleLayout.css" rel="stylesheet">
+    <link href="css/cuidadosEdit.css" rel="stylesheet">
+    <title>Portal Covid-19</title>
+</head>
+
+<body>
+    <div id="lateral">
+        <div id="menu">
+
+            <h3 class="link-titulo">Menu</h3>
+            <ul class="box">
+                <li><a href="entrar.html">Perfil</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="#">Administrar Página</a></li>
+            </ul>
+
+
+        </div> <!-- /#menu -->
+    </div> <!-- /#lateral -->
+
+    <div class="page-wrapp">
+        <header id="header">
+            <h2>Portal Covid-19</h2>
+        </header>
+        <nav>
+            <ul>
+                <li class="dropdown active"><a href="#" class="dropbtn">Usuário</a></li>
+                <li class="dropdown"><a href="instituicaoEdit.html" class="dropbtn">Instituição</a></li>
+                <div class="clear"></div>
+            </ul><!-- Fim da lista -->
+        </nav>
+       
+        <form class="contentForm" id="formUsers" method="POST">
+            <dl class="typeUser" id="listUsers">
+                <h2>Listar Todos os Usuários</h2>
+            </dl>
+            <div class="buttonSubmit">
+                <button type="submit" class="button" id="buttonListarUsers">Listar</button>
+            </div>
+        </form>
+        <div class="contentForm" id="divButtonOcultarUsers"><a href="usuarioEdit.html" id="buttonOcultarUsers"></a></div>
+
+        <hr class="line">
+
+        <form class="contentForm" id="formUpdateUser" method="POST">
+            <h2>Atualizar Usuário</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="idUserUpdate" name="inputID" type="number" placeholder="ID" value="" required>
+            </div>
+            <!--inputID-->
+
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputName">Atualizar Nome:</label></div>
+                <input class="inputBox" id="nomeUpdate" name="inputName" type="text" placeholder="Nome" value="">
+            </div>
+            <!--inputNome-->
+
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputName">Atualizar Instituição:</label></div>
+                <input class="inputBox" id="instituicaoUpdate" name="inputInstituicao" type="text"
+                    placeholder="ID da Instituição" value="">
+            </div>
+            <!--inputInstituicao-->
+
+            <div class="buttonSubmit">
+                <button type="submit" class="button">Atualizar</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <form class="contentForm" id="formRemoveUser" method="POST">
+            <h2>Remover Usuário</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="idUserRemove" name="inputID" type="number" placeholder="ID" value="" required>
+            </div>
+            <!--inputID-->
+
+            <div class="buttonSubmit">
+                <button type="submit" class="button">Remover</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <footer></footer>
+        <script type="text/javascript" src="js/usuario.js"></script>
+</body>
+
+</html>

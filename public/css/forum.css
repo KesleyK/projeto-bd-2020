@@ -1,0 +1,107 @@
+.formForum{
+  height: 30rem;
+}
+
+.boxChat {
+  margin: 0 auto;
+  background-color: #595959;
+  width: 95%;
+  height: 100%;
+  padding: 5px 20px 5px 20px;
+  overflow-y: scroll;
+}
+
+.message {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 1% 1% 1% 1%;
+  width: 90%;
+  margin-right: 10%;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+.username{
+  margin-top: 1%;
+  color: white;
+  font-size: 0.8rem;
+  padding-left: 3px;
+}
+
+.messageSend{
+  background-color: #eee;
+  background-size:contain;
+  width: 90%;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  padding: 1% 1% 1% 1%;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-align: end;
+}
+
+.usernameSend{
+  margin-top: 1%;
+  color: white;
+  font-size: 0.8rem;
+  padding-right: 3px;
+  text-align: end;
+}
+
+.inputMessage{
+  width: 96%;
+  height: 40px;
+}
+
+#triangulo-para-direita {
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid #2d9cdb;
+}
+
+.buttonSend{
+  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.inputMessage{
+  margin-top: 8px;
+  float: left;
+  font-size: medium;
+  outline: none;
+}
+
+.alinharDiv{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.button{
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 20px;
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: #2d9cdb;
+  border: none;
+  outline: NONE;
+}
+
+.textLabel{
+  color: white;
+  font-size: 1.5em;
+}
+
+#buttonLoginForum{
+  text-align: end;
+  margin-right: 20px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/conf.css" rel="stylesheet">
+    <link href="css/styleMenu.css" rel="stylesheet">
+    <link href="css/styleLayout.css" rel="stylesheet">
+    <link href="css/cuidadosEdit.css" rel="stylesheet">
+    <title>Portal Covid-19</title>
+</head>
+<body>
+    <div id="lateral">
+        <div id="menu">
+                      
+        <h3 class="link-titulo">Menu</h3>
+          <ul class="box">					
+            <li><a href="entrar.html">Perfil</a></li>
+            <li ><a href="forum.html">Fórum</a></li>
+            <li ><a href="#">Administrar Página</a></li>
+            <div class="clear"></div>
+          </ul>
+        
+        
+        </div> <!-- /#menu -->
+    </div> <!-- /#lateral -->
+
+    <div class="page-wrapp">
+        <header id="header">
+            <h2>Portal Covid-19</h2>
+        </header>
+        <nav>
+            <ul>
+                <li class="dropdown"><a href="usuarioEdit.html" class="dropbtn">Usuário</a></li>
+                <li class="dropdown active"><a href="#" class="dropbtn">Instituição</a></li>
+                <div class="clear"></div>
+              </ul><!-- Fim da lista -->   
+        </nav>
+
+        <form class="contentForm" id="formList" method="POST">    
+            <dl class="typeUser" id="listInst"><h2>Listar Todas as Instituições</h2></dl>
+            <div class="buttonSubmit">
+                <button type="submit" class="button" id="buttonListar">Listar</button>
+            </div>
+        </form>
+
+        <div class="contentForm" id="divButtonOcultar"><a href="instituicaoEdit.html" id="buttonOcultar"></a></div>
+
+        <hr class="line">
+
+        <form class="contentForm" id="form" method="POST">
+            <h2>Adicionar Instituição</h2>
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputName">*Nome:</label></div>
+                <input class="inputBox" id="nome" name="inputName" type="text" placeholder="Nome" value="" required>
+            </div><!--inputNome-->
+
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputCNPJ">*CNPJ:</label></div>
+                <input class="inputBox" id="cnpj" name="inputCNPJ" type="text" placeholder="CNPJ" value="" required>
+            </div><!--inputCNPJ-->
+
+            <div class="buttonSubmit">
+                <button type="submit" class="button">Adicionar</button>
+            </div>
+        </form>
+        
+        <hr class="line">
+
+        <form class="contentForm" id="formUpdate" method="POST">
+            <h2>Atualizar Instituição</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="id" name="inputID" type="number" placeholder="ID" value="" required>
+            </div><!--inputID-->
+
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputName">Atualizar Nome:</label></div>
+                <input class="inputBox" id="nomeUpdate" name="inputName" type="text" placeholder="Nome" value="">
+            </div><!--inputNome-->
+
+            <div class="inputNameBox">
+                <div class="labelInput"><label for="inputCNPJ">Atualizar CNPJ:</label></div>
+                <input class="inputBox" id="cnpjUpdate" name="inputCNPJ" type="text" placeholder="CNPJ" value="">
+            </div><!--inputCNPJ-->
+
+            <div class="buttonSubmit">
+                <button type="submit" class="button">Atualizar</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <form class="contentForm" id="formRemove" method="POST">
+            <h2>Remover Instituição</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="idRemove" name="inputID" type="number" placeholder="ID" value="" required>
+            </div><!--inputID-->
+
+            <div class="buttonSubmit">
+                <button type="submit" class="button" id="buttonRemove">Remover</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <footer></footer>
+        <script type="text/javascript" src="js/instituicao.js"></script>
+</body>
+</html>

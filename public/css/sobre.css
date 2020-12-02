@@ -1,0 +1,27 @@
+.boxSobre, .boxNoticia{
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    padding-top: calc(50px/4);
+    float: left;
+    margin-top: 25px;
+    background-color: #595959;
+}
+
+.boxSobre{
+    border-right: solid 1px #333333;
+    border-bottom: solid 3px #2d9cdb;
+}
+
+.sobre, .noticia{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.boxSobre:hover, .boxNoticia:hover{
+    border-bottom: solid 3px #a8dcfa;
+    transition-timing-function: 5s;
+    transition-delay: 0.1s;
+}

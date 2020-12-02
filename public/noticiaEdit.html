@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/conf.css" rel="stylesheet">
+    <link href="css/styleMenu.css" rel="stylesheet">
+    <link href="css/styleLayout.css" rel="stylesheet">
+    <link href="css/cuidadosEdit.css" rel="stylesheet">
+    <title>Portal Covid-19</title>
+</head>
+<body>
+    <div id="lateral">
+        <div id="menu">
+                      
+        <h3 class="link-titulo">Menu</h3>
+          <ul class="box">					
+            <li><a href="entrar.html">Perfil</a></li>
+            <li ><a href="forum.html">Fórum</a></li>
+            <li ><a href="#">Administrar Página</a></li>
+            <div class="clear"></div>
+          </ul>
+        
+        
+        </div> <!-- /#menu -->
+    </div> <!-- /#lateral -->
+
+    <div class="page-wrapp">
+        <header id="header">
+            <h2>Portal Covid-19</h2>
+        </header>
+        <nav>
+            <ul>
+                <li class="dropdown"><a href="cuidadosEdit.html" class="dropbtn">Cuidados</a></li>
+                <li class="dropdown"><a href="transmissaoEdit.html" class="dropbtn">Transmissão</a></li>
+                <li class="dropdown"><a href="sintomasEdit.html" class="dropbtn">Sintomas</a></li>
+                <li class="dropdown active"><a href="#" class="dropbtn">Notícia</a></li>
+                <li class="dropdown"><a href="usuarioEdit.html" class="dropbtn">Usuário</a></li>
+                <li class="dropdown"><a href="instituicaoEdit.html" class="dropbtn">Instituição</a></li>
+              </ul><!-- Fim da lista -->
+              
+        </nav>
+
+        <form class="contentForm">
+            <h2>Adicionar Notícia</h2>
+            <div class="inputTitleBox">
+                <div class="labelInput"><label for="inputTitle">*Título:</label></div>
+                <input class="inputBox" id="title" name="inputName" type="text" placeholder="Título" value="" required>
+            </div><!--inputTitle-->
+
+            <div class="inputUrlBox">
+                <div class="labelInput"><label for="inputUrl">*URL da Imagem:</label></div>
+                <input class="inputBox" id="url" name="inputUrl" type="text" placeholder="URL da Imagem" value="" required>
+            </div><!--inputURL-->
+
+            <div class="inputIntituicaoBox">
+                <div class="labelInput"><label for="inputIntituicao">*Id da Instituição:</label></div>
+                <input class="inputBox" id="ID" name="inputIntituicao" type="number" placeholder="ID da Instituição" value="" required>
+            </div><!--inputIntituicao-->
+
+            <div class="inputDescriptionBox">
+                <div class="labelInput"><label for="inputDescription">*Descrição:</label></div>
+                <textarea name="inputDescription" id="description" cols="70" rows="10" placeholder="Escreva aqui a descrição..." required></textarea>
+            </div><!--inputDescription-->
+
+            <div class="buttonSubmit">
+                <button type="button" class="button">Adicionar</button>
+            </div>
+        </form>
+        
+        <hr class="line">
+
+        <form class="contentForm">
+            <h2>Atualizar Notícia</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="ID" name="inputID" type="number" placeholder="ID" value="" required>
+            </div><!--inputID-->
+
+            <div class="inputUrlBox">
+                <div class="labelInput"><label for="inputUrl">Nova URL da Imagem:</label></div>
+                <input class="inputBox" id="url" name="inputUrl" type="text" placeholder="URL da Imagem" value="" >
+            </div><!--inputURL-->
+
+            <div class="inputNewTitleBox">
+                <div class="labelInput"><label for="inputNewTitle">Novo Título:</label></div>
+                <input class="inputBox" id="newTitle" name="inpuNewTitle" type="text" placeholder="Novo Título" value="">
+            </div><!--inputNewTitle-->
+
+            <div class="inputNewIntituicaoBox">
+                <div class="labelInput"><label for="inputNewIntituicao">*Id da Nova Instituição:</label></div>
+                <input class="inputBox" id="ID" name="inputNewIntituicao" type="number" placeholder="ID da Intituição" value="" required>
+            </div><!--inputIntituicao-->
+
+            <div class="inputDescriptionBox">
+                <div class="labelInput"><label for="inputNewDescription">Nova Descrição:</label></div>
+                <textarea name="inputNewDescription" id="newDescription" cols="70" rows="10" placeholder="Escreva aqui a descrição..."></textarea>
+            </div><!--inputNewDescription-->
+
+            <div class="buttonSubmit">
+                <button type="button" class="button">Atualizar</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <form class="contentForm">
+            <h2>Remover Notícia</h2>
+            <div class="inputIdBox">
+                <div class="labelInput"><label for="inputID">*Id:</label></div>
+                <input class="inputBox" id="ID" name="inputID" type="number" placeholder="ID" value="" required>
+            </div><!--inputID-->
+
+            <div class="buttonSubmit">
+                <button type="button" class="button">Remover</button>
+            </div>
+        </form>
+
+        <hr class="line">
+
+        <footer></footer>
+</body>
+</html>

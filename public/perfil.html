@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/perfil.css" rel="stylesheet">
+    <link href="css/styleMenu.css" rel="stylesheet">
+    <link href="css/styleLayout.css" rel="stylesheet">
+    <title>Portal Covid-19</title>
+</head>
+<body>
+    <div id="lateral">
+        <div id="menu">
+                      
+        <h3 class="link-titulo">Menu</h3>
+          <ul class="box">					
+            <li><a href="entrar.html">Perfil</a></li>
+            <li ><a href="forum.html">Fórum</a></li>
+            <li ><a href="usuarioEdit.html">Administrar Página</a></li>
+          </ul>
+        
+        
+        </div> <!-- /#menu -->
+    </div> <!-- /#lateral -->
+
+    <div class="page-wrapp">
+        <header id="header">
+            <h2>Portal Covid-19</h2>
+        </header>
+        <form class="contentForm" id="form" method="POST">
+            <div class="thumbnail">
+                <div>
+                    <img src="images/profilePhoto.png" alt="Avatar" class="image">
+                </div>
+                <a href="#"><div class="overlay"></div></a>
+            </div>
+            <div class="inputName">
+                <div class="labelInput"><label for="inputName">Nome:</label></div>
+                <input class="name" id="txt_nome" name="inputName" type="text" placeholder="Nome" value="" required>
+            </div><!--inputName-->
+
+            <div class="inputName">
+                <div class="labelInput"><label for="emailInput">Email:</label></div>
+                <input class="name" id="inputEmail" name="emailInput" type="email" placeholder="example@gmail.com" value="" required>
+            </div><!--inputEmail-->
+
+            <div class="inputName">
+                <div class="labelInput"><label for="passwordInput">Senha:</label></div>
+                <input class="name" id="inputPassword" name="passwordInput" type="password" value="" required>
+            </div><!--inputPassword-->
+
+            <div class="inputName">
+                <div class="labelInput"><label for="passwordInputConfirm">Confirmar Senha:</label></div>
+                <input class="name" id="inputPasswordConfirm" name="passwordInputConfirm" type="password" value="" required>
+            </div><!--inputPasswordConfirm-->
+
+            <div class="inputTypeUser">
+                <div class="labelInput" ><label for="typeUser">Tipo de Usuário:</label></div>
+                <select class="typeUser" name="typeUser" id="typeUser" required >
+                    <option value=""></option>
+                </select>
+            </div><!--inputTypeUser-->
+
+            <div class="inputTypeUser">
+                <div class="labelInput" ><label for="typeUser">Instituição Pertecente:</label></div>
+                <select class="typeUser" name="typeUser" id="idInstituicao" required >
+                    <option value=""></option>
+                </select>
+            </div><!--inputTypeUser-->
+
+            <div class="buttonSubmit">
+                
+                <button onclick="logar()" id="buttonLog" type="button" class="button">Entrar</button>
+                <button type="button submit" onclick="" id="buttonSub" class="button pure-button pure-button-primary" >Cadatrar-se</button>
+                
+
+                <!-- <input onclick="" id="buttonSub" class="button pure-button pure-button-primary" type="submit" value="Cadastrar-se">
+                <input onclick="logar()" id="buttonLog" class="button" value="Entrar">
+                 -->
+            </div>
+        </form>
+        <script type="text/javascript" src="js/criarPerfil.js"></script>
+        <footer></footer>
+</body>
+</html>
