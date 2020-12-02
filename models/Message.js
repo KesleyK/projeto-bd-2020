@@ -4,7 +4,8 @@ class Message {
   static showAll(cb) {
     conn.query(
       "SELECT mensagem.*, nome as nome_usuario FROM mensagem" +
-        " INNER JOIN usuario ON usuario_id = usuario.id",
+        " INNER JOIN usuario ON usuario_id = usuario.id" +
+        " ORDER BY id ASC",
       (err, rows) => {
         if (err) return cb(null, err.sqlMessage);
 
