@@ -16,7 +16,10 @@ class Message {
 
   static showAllByInstitution(data, cb) {
     conn.query(
-      "SELECT * FROM mensagem WHERE instituicao_id = ?",
+      "SELECT mensagem.*, nome as nome_usuario FROM mensagem" +
+        " INNER JOIN usuario ON usuario_id = usuario.id" +
+        " WHERE mensagem.instituicao_id = ?" +
+        " ORDER BY id ASC",
       data.id,
       (err, rows) => {
         if (err) return cb(null, err.sqlMessage);
