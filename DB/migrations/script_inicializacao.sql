@@ -10,6 +10,18 @@ CREATE TABLE instituicao (
     nome VARCHAR(45) NOT NULL
 );
 
+CREATE TABLE tipo_instituicao (
+	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    tipo VARCHAR(15) NOT NULL UNIQUE
+);
+
+CREATE TABLE mapa_tipo_instituicao (
+	instituicao_id INTEGER UNSIGNED UNIQUE,
+    tipo_instituicao_id INTEGER UNSIGNED,
+    FOREIGN KEY(instituicao_id) references instituicao(id) ON DELETE CASCADE,
+    FOREIGN KEY(tipo_instituicao_id) references tipo_instituicao(id) ON DELETE CASCADE
+);
+
 CREATE TABLE usuario (
 	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
@@ -28,36 +40,19 @@ CREATE TABLE mensagem (
     FOREIGN KEY(usuario_id) references usuario(id) ON DELETE CASCADE
 );
 
-CREATE TABLE sobre (
+CREATE TABLE sobre_covid (
 	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    `status` INT NOT NULL,
+    titulo VARCHAR(60) NOT NULL,
+    tipo ENUM('transmissao', 'sintoma', 'cuidado') NOT NULL
+);
+
+CREATE TABLE descricao_sobre_covid (
+	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    descricao_txt TEXT NOT NULL,
     instituicao_id INTEGER UNSIGNED,
-    FOREIGN KEY(instituicao_id) references instituicao(id) ON DELETE CASCADE
-
-);
-
-CREATE TABLE transmissao (
-	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(60) NOT NULL,
-    descricao VARCHAR(400) NOT NULL,
-    sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
-);
-
-CREATE TABLE sintomas (
-	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(60) NOT NULL,
-    descricao VARCHAR(400) NOT NULL,
-    sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
-);
-
-CREATE TABLE cuidados (
-	id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(60) NOT NULL,
-    descricao VARCHAR(400) NOT NULL,
-    sobre_id INTEGER UNSIGNED,
-    FOREIGN KEY(sobre_id) references sobre(id) ON DELETE CASCADE
+    sobre_covid_id INTEGER UNSIGNED,
+    FOREIGN KEY(instituicao_id) references instituicao(id) ON DELETE CASCADE,
+    FOREIGN KEY(sobre_covid_id) references sobre_covid(id) ON DELETE CASCADE
 );
 
 CREATE TABLE noticias (
@@ -75,7 +70,7 @@ CREATE TABLE tipo_usuario (
 );
 
 CREATE TABLE mapa_tipo_usuario (
-	usuario_id INTEGER UNSIGNED,
+	usuario_id INTEGER UNSIGNED UNIQUE,
     tipo_usuario_id INTEGER UNSIGNED,
     FOREIGN KEY(usuario_id) references usuario(id) ON DELETE CASCADE,
     FOREIGN KEY(tipo_usuario_id) references tipo_usuario(id) ON DELETE CASCADE
